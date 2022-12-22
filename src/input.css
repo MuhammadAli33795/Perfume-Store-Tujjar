@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*Top Down Padding*/
+.lrPadding {
+    @apply px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24;
+}
+/*Top Down Padding*/
+.lrMargin {
+    @apply mx-5 sm:mx-10;
+}
+
+/*Nav Classes*/
+nav {
+    @apply bg-black text-white py-3;
+}
+.navLinkCont {
+    @apply flex justify-between sm:items-baseline;
+}
+.navLinks {
+    @apply mx-1 hover:text-orange-300 sm:mx-5 lg:mx-10;
+}
+/*Nav Cart Button*/
+.navCartButton {
+    @apply bg-orange-400 hover:text-orange-300 rounded-sm p-1;
+}
+
+/*Main Classes*/
+main {
+    @apply py-24 text-white text-center lrPadding bg-slate-500  bg-tableImage bg-no-repeat bg-cover bg-center;
+}
