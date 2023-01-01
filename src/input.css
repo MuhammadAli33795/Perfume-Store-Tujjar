@@ -2,31 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Universal Classes Start Here*/
 /*Top Down Padding*/
 .lrPadding {
     @apply px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24;
 }
+
 /*Top Down Padding*/
 .lrMargin {
     @apply mx-5 sm:mx-10;
 }
 
-/*Nav Classes*/
+/*Universal Classes Ends Here*/
+
+
+/*Nav Classes Start Here*/
 nav {
-    @apply bg-black text-white py-3;
+    @apply bg-black text-white py-3 z-0;
 }
-.navLinkCont {
-    @apply flex justify-between sm:items-baseline;
+/*Hidden Menu for Mobile*/
+.hiddenMenu {
+    @apply absolute bg-white px-2 pr-5 py-1;
 }
-.navLinks {
-    @apply mx-1 hover:text-orange-300 sm:mx-5 lg:mx-10;
+/*Mobile Menu links*/
+.mobileMenu {
+    @apply text-lg my-2 px-2;
 }
-/*Nav Cart Button*/
-.navCartButton {
-    @apply bg-orange-400 hover:text-orange-300 rounded-sm p-1;
+/*Nav Search in Hidden menu*/
+#navHidden input {
+    @apply outline-none;
+}
+#navHidden i {
+    @apply cursor-pointer hover:text-pink-300;
+}
+#navHidden li {
+    @apply border-b border-slate-200 py-3 ml-3;
 }
 
-/*Main Classes*/
-main {
-    @apply py-24 text-white text-center lrPadding bg-slate-500  bg-tableImage bg-no-repeat bg-cover bg-center;
+/*Menu, Logo and Link Container*/
+.menuDivFlex {
+   @apply flex justify-between gap-3 items-center;
 }
+
+/*Nav menue for mobile*/
+.menueCss { @apply text-xl hover:text-pink-300 transition ease-in-out cursor-pointer; }
+
+/*Nav Link Container*/
+.navLinkCont {
+    @apply hidden sm:flex sm:justify-between sm:items-center sm:visible;
+}
+/*Nav Heading*/
+.navHeading{
+    @apply text-4xl;
+}
+/*Nav Logo pic*/
+.navLogoPic {
+    @apply h-16;
+}
+/*Nav Links*/
+.navLinks {
+    @apply mx-1 hover:text-pink-300 transition ease-in-out sm:mx-5 lg:mx-10;
+}
+
+/*Nav Classes Ends Here*/
+
+
+/*Main Classes Start Here*/
+main {
+    @apply py-24 text-white text-center lrPadding bg-slate-500  bg-mainBgImage-640px sm:bg-mainBgImage-768px max-h-80 bg-no-repeat bg-cover bg-center bg-blend-multiply;
+}
+/*Text Heading h1*/
+.mainH1 {
+    @apply text-4xl sm:text-6xl lg:text-7xl;
+}
+/*Text Heading h2*/
+.mainH2 {
+    @apply text-xl sm:text-3xl lg:text-4xl mt-3 sm:mt-6 lg:mt-8;
+}
+/*Main Classes Ends Here*/

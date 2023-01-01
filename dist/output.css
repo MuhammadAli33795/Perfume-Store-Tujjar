@@ -551,20 +551,46 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
+.flex {
+  display: flex;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.hidden {
+  display: none;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
+.justify-center {
+  justify-content: center;
 }
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+/*Universal Classes Start Here*/
 
 /*Top Down Padding*/
 
@@ -615,9 +641,12 @@ video {
   }
 }
 
-/*Nav Classes*/
+/*Universal Classes Ends Here*/
+
+/*Nav Classes Start Here*/
 
 nav {
+  z-index: 0;
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   padding-top: 0.75rem;
@@ -626,25 +655,124 @@ nav {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.navLinkCont {
+/*Hidden Menu for Mobile*/
+
+.hiddenMenu {
+  position: absolute;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-right: 1.25rem;
+}
+
+/*Mobile Menu links*/
+
+.mobileMenu {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+/*Nav Search in Hidden menu*/
+
+#navHidden input {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+#navHidden i {
+  cursor: pointer;
+}
+
+#navHidden i:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 168 212 / var(--tw-text-opacity));
+}
+
+#navHidden li {
+  margin-left: 0.75rem;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/*Menu, Logo and Link Container*/
+
+.menuDivFlex {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
+}
+
+/*Nav menue for mobile*/
+
+.menueCss {
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menueCss:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 168 212 / var(--tw-text-opacity));
+}
+
+/*Nav Link Container*/
+
+.navLinkCont {
+  display: none;
 }
 
 @media (min-width: 640px) {
   .navLinkCont {
-    align-items: baseline;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
+
+/*Nav Heading*/
+
+.navHeading {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+/*Nav Logo pic*/
+
+.navLogoPic {
+  height: 4rem;
+}
+
+/*Nav Links*/
 
 .navLinks {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navLinks:hover {
   --tw-text-opacity: 1;
-  color: rgb(253 186 116 / var(--tw-text-opacity));
+  color: rgb(249 168 212 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -661,26 +789,15 @@ nav {
   }
 }
 
-/*Nav Cart Button*/
+/*Nav Classes Ends Here*/
 
-.navCartButton {
-  border-radius: 0.125rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
-  padding: 0.25rem;
-}
-
-.navCartButton:hover {
-  --tw-text-opacity: 1;
-  color: rgb(253 186 116 / var(--tw-text-opacity));
-}
-
-/*Main Classes*/
+/*Main Classes Start Here*/
 
 main {
+  max-height: 20rem;
   --tw-bg-opacity: 1;
   background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-  background-image: url('/img/Bgtable2.jpg');
+  background-image: url('/public/img/main-Bg-Image/Compressed/Perfume-Bg-Pink-640-com.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -689,6 +806,7 @@ main {
   text-align: center;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-blend-mode: multiply;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -718,5 +836,64 @@ main {
   main {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+}
+
+@media (min-width: 640px) {
+  main {
+    background-image: url('/public/img/main-Bg-Image/Compressed/Perfume-Bg-Pink-1920-com-crop.png');
+  }
+}
+
+/*Text Heading h1*/
+
+.mainH1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .mainH1 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainH1 {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
+/*Text Heading h2*/
+
+.mainH2 {
+  margin-top: 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 640px) {
+  .mainH2 {
+    margin-top: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainH2 {
+    margin-top: 2rem;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+/*Main Classes Ends Here*/
+
+@media (min-width: 640px) {
+  .sm\:hidden {
+    display: none;
   }
 }

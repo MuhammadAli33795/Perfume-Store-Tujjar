@@ -1,4 +1,4 @@
-let menue = document.getElementById('menue');
+let menue = document.getElementById('menu');
 let navHidden = document.getElementById('navHidden')
 //Adding Event listner to know when menue button is pressed
 menue.addEventListener('click', () => {

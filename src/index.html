@@ -16,14 +16,31 @@
 
     <!--Favicon--><!--
     <link rel="shortcut icon" type="image/x-icon" href="/img/Favicon.png">-->
-    <link rel="shortcut icon" href="/img/favicon_Tujjar_PerfumeStore/favicon-16x16.png">
+    <link rel="shortcut icon" href="../public/img/favicon-16x16.png">
 </head>
 <body>
+
+    <!--Nav Starts Here-->
     <nav>
+
         <!--Nav Flex Container-->
-        <div class="navLinkCont lrMargin">
-            <!--Nav Heading-->
-            <h1 class="text-4xl">Tujjar-Al-Masak</h1>
+        <div class="menuDivFlex lrMargin ">
+            <!--Nav Logo Pic-->
+            <a href="./index.html" ><img src="../public/img/Tujjar-Logo-NoBG.png" alt="Tujjar Logo" class="navLogoPic"></a>
+            
+            <!--For Mobiles-->
+            <div class="flex justify-between gap-3 sm:hidden">
+
+            <!--Cart-->
+            <button>
+                <a href="./" class="navLinks"><i class="fa-solid fa-cart-shopping"></i></a>
+            </button>
+            <!--Menue-->
+            <div class="menueCss" id="menu">
+                <span><i class="fa-solid fa-bars"></i></span>
+            </div>
+            </div>
+            
             <!--Nav Links-->
             <div class="navLinkCont">
                 <a href="./" class="navLinks">Home</a>
@@ -36,24 +53,74 @@
             </div>
         </div>
     </nav>
+
+    <!--Hidden Mobile Menu-->
+    <div class="hiddenMenu hidden" id="navHidden">
+        <ul>
+        <!--Serch bar and Search Icon-->
+        <li class="mobileMenu">
+            <input type="text" id="search" placeholder="Search Products">
+            <i class="fa-solid fa-magnifying-glass searchIcon"></i><br>
+        </li>
     
-    <main><!--Title With Background Image-->
+        <!--Links-->
+        <li><a href="./" class="navLinks mobileMenu">Home</a></li>
+        <li><a href="./" class="navLinks mobileMenu">Products</a></li>
+        <li><a href="./" class="navLinks mobileMenu">About Us</a></li>
+        <li><a href="./" class="navLinks mobileMenu">Contact</a></li>
+        </ul>
+    </div>
+    <!--Nav Ends Here-->
+
+    <!--Menue Starts Here-->
+    <main id="main1"><!--Title With Background Image-->
         <!--Heading 1-->
-        <h1 class="text-7xl">Tujjar-Al-Masak</h1>
+        <h1 class="mainH1">Tujjar-Al-Masak</h1>
         <!--Heading 2-->
-        <h2 class="text-4xl my-3">
+        <h2 class="mainH2">
             Extraordinary Collections<br>
         </h2>
     </main>
-
+    <!--Menue Ends Here-->
+    
+    <!--Products section starts here-->
     <section>
-        <h1>New Arrivals</h1>
+        <h1 class="text-center text-3xl">Products</h1>
         <!--Cards-->
         <div>
-
+            <!--Image 1-->
+            <div class="text-center flex justify-center">
+                <div>
+                    <!--Small Text 1-->
+                    <div class="topB">
+                        <span class="smallText2">Lorem Ippsum</span>
+            
+                        <!--heading-->
+                        <h4 class="textSizeh4 sentenceSpacing">Education For Milking Cows</h4>
+                        <!--Paragraph-->
+                        <p class="pb-5">
+                            Lorum ippsum degrado le buxo<br>
+                            seniorita le dance heel pawi dad<br>
+                            Numbers
+                        </p>
+                    </div>
+                    <!--Image-->
+                    <img src="../public/img/main-Bg-Image/Perfume-Bg-Pink.png" alt="Childerns Runing" class="shadow-2xl">
+                </div>
+            </div>
+    
         </div>
     </section>
-    
+    <!--Products section Ends here-->
+
+
+    <!--About US section starts here-->
+    <section>
+        <h1>About Us</h1>
+    </section>
+    <!--About US section Ends here-->
+
     <!--Script For Nav-->
-    <script src="/src/index.js"></script><!--Main Calculator Functionality-->
+    <script src="./index.js"></script><!--Main Calculator Functionality-->
+    <script src="./jsfiles/navMobile.js"></script><!--Main Calculator Functionality-->
 </html>
