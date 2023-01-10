@@ -1,2 +1,2 @@
-let mainwidth = document.getElementById("main1");
-console.log(mainwidth.offsetHeight);
+let windowWidth = document.getElementById("main1");
+console.log(windowWidth.offsetHeight);

@@ -8,3 +8,12 @@ menue.addEventListener('click', () => {
         navHidden.classList.add('hidden');
     }
 });
+
+let hideContent = document.getElementsByClassName("vis");
+
+if (window.matchMedia("(min-width: 768px)").matches) {
+    console.log("Less Then 768px");
+    for (let i = 0; i < hideContent.length; i++) {
+        hideContent[i].classList.remove('hidden');
+    }
+}    

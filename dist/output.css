@@ -551,8 +551,16 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
 }
 
 .hidden {
@@ -561,14 +569,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.gap-3 {
-  gap: 0.75rem;
 }
 
 .pb-5 {
@@ -629,23 +629,19 @@ video {
 
 /*Top Down Padding*/
 
-.lrMargin {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
+/* .lrMargin {
+  @apply mx-5 sm:mx-10;
+}*/
 
-@media (min-width: 640px) {
-  .lrMargin {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-  }
+.lrMargin {
+  margin: 0vw 5vw;
 }
 
 /*Universal Classes Ends Here*/
 
 /*Nav Classes Start Here*/
 
-nav {
+header {
   z-index: 0;
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -655,7 +651,170 @@ nav {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-/*Hidden Menu for Mobile*/
+/*Menu, Logo and Link Container*/
+
+.headerDivFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+/*Nav menue and cart container when width < 1024px*/
+
+.menuCartCont {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .menuCartCont {
+    display: none;
+  }
+}
+
+/*Nav Logo,Links,Search bar and Buttons at width > 1024px*/
+
+/*Nav Logo pic*/
+
+.navLogoPic {
+  height: 4rem;
+  align-self: center;
+}
+
+/*Search Bar container*/
+
+.searchCont {
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 0.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 1024px) {
+  .searchCont {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/*Search Bar*/
+
+.searchBar1 {
+  border-bottom-width: 1px;
+  --tw-text-opacity: 1;
+  color: rgb(244 114 182 / var(--tw-text-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+/*Header Buttons*/
+
+.headerButtons {
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 114 182 / var(--tw-bg-opacity));
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.headerButtons:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(244 114 182 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .headerButtons {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+/*Cart Button*/
+
+.cartButton {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/*Nav menue in Menue and cart Container*/
+
+.menueCss {
+  cursor: pointer;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menueCss:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 168 212 / var(--tw-text-opacity));
+}
+
+/*Nav Link Container*/
+
+nav {
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+  }
+}
+
+/*Nav Links*/
+
+.navLinks {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navLinks:hover {
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(244 114 182 / var(--tw-text-opacity));
+}
+
+/*Nav Classes Ends Here*/
+
+/*Hidden Menu for start here Mobile at width < 1024px*/
 
 .hiddenMenu {
   position: absolute;
@@ -680,18 +839,19 @@ nav {
 
 /*Nav Search in Hidden menu*/
 
-#navHidden input {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+.searchBar2 {
+  border-style: none;
 }
 
-#navHidden i {
+.searchIcon {
   cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(244 114 182 / var(--tw-text-opacity));
 }
 
-#navHidden i:hover {
+.searchIcon:hover {
   --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
+  color: rgb(219 39 119 / var(--tw-text-opacity));
 }
 
 #navHidden li {
@@ -703,93 +863,7 @@ nav {
   padding-bottom: 0.75rem;
 }
 
-/*Menu, Logo and Link Container*/
-
-.menuDivFlex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-}
-
-/*Nav menue for mobile*/
-
-.menueCss {
-  cursor: pointer;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menueCss:hover {
-  --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
-}
-
-/*Nav Link Container*/
-
-.navLinkCont {
-  display: none;
-}
-
-@media (min-width: 640px) {
-  .navLinkCont {
-    visibility: visible;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-/*Nav Heading*/
-
-.navHeading {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-/*Nav Logo pic*/
-
-.navLogoPic {
-  height: 4rem;
-}
-
-/*Nav Links*/
-
-.navLinks {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navLinks:hover {
-  --tw-text-opacity: 1;
-  color: rgb(249 168 212 / var(--tw-text-opacity));
-}
-
-@media (min-width: 640px) {
-  .navLinks {
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .navLinks {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
-  }
-}
-
-/*Nav Classes Ends Here*/
+/*Hidden Menu for ends here Mobile*/
 
 /*Main Classes Start Here*/
 
@@ -891,9 +965,3 @@ main {
 }
 
 /*Main Classes Ends Here*/
-
-@media (min-width: 640px) {
-  .sm\:hidden {
-    display: none;
-  }
-}

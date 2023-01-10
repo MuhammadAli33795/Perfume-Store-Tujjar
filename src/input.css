@@ -5,78 +5,104 @@
 /*Universal Classes Start Here*/
 /*Top Down Padding*/
 .lrPadding {
-    @apply px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24;
+  @apply px-5 sm:px-10 md:px-14 lg:px-20 xl:px-24;
 }
 
 /*Top Down Padding*/
+/* .lrMargin {
+  @apply mx-5 sm:mx-10;
+}*/
+
 .lrMargin {
-    @apply mx-5 sm:mx-10;
+    margin: 0vw 5vw;
 }
 
 /*Universal Classes Ends Here*/
 
-
 /*Nav Classes Start Here*/
-nav {
-    @apply bg-black text-white py-3 z-0;
-}
-/*Hidden Menu for Mobile*/
-.hiddenMenu {
-    @apply absolute bg-white px-2 pr-5 py-1;
-}
-/*Mobile Menu links*/
-.mobileMenu {
-    @apply text-lg my-2 px-2;
-}
-/*Nav Search in Hidden menu*/
-#navHidden input {
-    @apply outline-none;
-}
-#navHidden i {
-    @apply cursor-pointer hover:text-pink-300;
-}
-#navHidden li {
-    @apply border-b border-slate-200 py-3 ml-3;
+header {
+  @apply bg-black text-white py-3 z-0;
 }
 
 /*Menu, Logo and Link Container*/
-.menuDivFlex {
-   @apply flex justify-between gap-3 items-center;
+.headerDivFlex {
+  @apply flex justify-between gap-2 items-center;
 }
-
-/*Nav menue for mobile*/
-.menueCss { @apply text-xl hover:text-pink-300 transition ease-in-out cursor-pointer; }
-
-/*Nav Link Container*/
-.navLinkCont {
-    @apply hidden sm:flex sm:justify-between sm:items-center sm:visible;
+/*Nav menue and cart container when width < 1024px*/
+.menuCartCont {
+  @apply flex justify-between gap-3 md:hidden;
 }
-/*Nav Heading*/
-.navHeading{
-    @apply text-4xl;
-}
+/*Nav Logo,Links,Search bar and Buttons at width > 1024px*/
 /*Nav Logo pic*/
 .navLogoPic {
-    @apply h-16;
+  @apply h-16 self-center;
+}
+/*Search Bar container*/
+.searchCont {
+  @apply text-lg p-1 bg-white lg:p-2 lg:px-4 rounded-xl;
+}
+/*Search Bar*/
+.searchBar1 {
+    @apply border-b outline-none text-pink-400;
+}
+/*Header Buttons*/
+.headerButtons {
+    @apply py-3 lg:mx-2 text-base lg:text-xl lg:p-2 lg:px-4 hover:text-pink-400 hover:bg-white bg-pink-400 rounded-lg;
+}
+/*Cart Button*/
+.cartButton {
+    @apply px-4;
+}
+
+/*Nav menue in Menue and cart Container*/
+.menueCss {
+  @apply text-xl hover:text-pink-300 transition ease-in-out cursor-pointer;
+}
+
+
+/*Nav Link Container*/
+nav {
+  @apply text-lg gap-10 md:flex justify-center items-center py-2 border-t border-gray-800;
 }
 /*Nav Links*/
 .navLinks {
-    @apply mx-1 hover:text-pink-300 transition ease-in-out sm:mx-5 lg:mx-10;
+  @apply mx-1 px-2 p-1 hover:bg-white hover:rounded-xl hover:text-pink-400 transition ease-in-out;
 }
 
 /*Nav Classes Ends Here*/
 
 
+/*Hidden Menu for start here Mobile at width < 1024px*/
+.hiddenMenu {
+  @apply absolute bg-white px-2 pr-5 py-1;
+}
+/*Mobile Menu links*/
+.mobileMenu {
+  @apply text-lg my-2 px-2;
+}
+/*Nav Search in Hidden menu*/
+.searchBar2 {
+  @apply border-none;
+}
+.searchIcon {
+  @apply cursor-pointer text-pink-400 hover:text-pink-600;
+}
+#navHidden li {
+  @apply border-b border-slate-200 py-3 ml-3;
+}
+/*Hidden Menu for ends here Mobile*/
+
+
 /*Main Classes Start Here*/
 main {
-    @apply py-24 text-white text-center lrPadding bg-slate-500  bg-mainBgImage-640px sm:bg-mainBgImage-768px max-h-80 bg-no-repeat bg-cover bg-center bg-blend-multiply;
+  @apply py-24 text-white text-center lrPadding bg-slate-500  bg-mainBgImage-640px sm:bg-mainBgImage-768px max-h-80 bg-no-repeat bg-cover bg-center bg-blend-multiply;
 }
 /*Text Heading h1*/
 .mainH1 {
-    @apply text-4xl sm:text-6xl lg:text-7xl;
+  @apply text-4xl sm:text-6xl lg:text-7xl;
 }
 /*Text Heading h2*/
 .mainH2 {
-    @apply text-xl sm:text-3xl lg:text-4xl mt-3 sm:mt-6 lg:mt-8;
+  @apply text-xl sm:text-3xl lg:text-4xl mt-3 sm:mt-6 lg:mt-8;
 }
 /*Main Classes Ends Here*/
